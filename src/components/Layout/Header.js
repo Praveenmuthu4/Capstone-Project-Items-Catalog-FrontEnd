@@ -1,13 +1,18 @@
 import React, { Fragment } from "react";
 import "../../App.css";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function Header() {
+  const { cartItems } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
   return (
     <Fragment>
       <nav className="navbar row">
         <div className="col-12 col-md-3">
           <div className="navbar-brand">
-            <img src="/images/Shopify.png" className="header-img" />
+            <img src="/images/Shopify.png" className="header-image" />
           </div>
         </div>
 
@@ -32,12 +37,14 @@ export default function Header() {
             Login
           </button>
 
-          <span id="cart" className="ml-3">
-            Cart
-          </span>
-          <span className="ml-1" id="cart_count">
-            2
-          </span>
+          <Link to="/cart" style={{ textDecoration: "none" }}>
+            <span id="cart" className="ml-3">
+              Cart
+            </span>
+            <span className="ml-1" id="cart_count">
+              {cartItems.length}
+            </span>
+          </Link>
         </div>
       </nav>
     </Fragment>

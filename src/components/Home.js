@@ -1,39 +1,32 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import HeaderData from "./Layout/HeaderData";
-import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../actions/productAction";
 import Product from "./Product/Product";
 import Loader from "./Layout/Loader";
+import { API } from "../global";
+import axios from "axios";
 
 export default function Home() {
-  const dispatch = useDispatch();
-
-  const { loading, products, error, productsCount } = useSelector(
-    (state) => state.products
-  );
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    dispatch(getProducts);
-  }, [dispatch]);
+    axios.get(`${API}/api/product`).then((res) => {
+      setProducts(res.data.products);
+    });
+  }, []);
 
   return (
     <Fragment>
-      {loading ? (
-        <Loader />
-      ) : (
-        <div className="container container-fluid">
-          <HeaderData title={"Buy Best Product Online"} />
-          <h1 id="products_heading">Latest Products</h1>
-          <section id="products" className="container mt-5">
-            <div className="row">
-              {products &&
-                products.map((product) => (
-                  <Product key={product._id} product={product} />
-                ))}
-            </div>
-          </section>
-        </div>
-      )}
+      <div className="container container-fluid">
+        <HeaderData title={"Buy Best Product Online"} />
+        <h1 id="products_heading">Latest Products</h1>
+        <section id="products" className="container mt-5">
+          <div className="row">
+            {products.map((product) => (
+              <Product key={product._id} product={product} />
+            ))}
+          </div>
+        </section>
+      </div>
     </Fragment>
   );
 }

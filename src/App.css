@@ -31,6 +31,17 @@ nav {
   padding: 1rem 1rem;
 }
 
+.header-image{
+  height: 54px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.view-product-image{
+  height: 392px;
+  width: 500px;
+}
+
 #search_btn {
   background-color: #69fea7;
 }
@@ -38,12 +49,6 @@ nav {
 .input-group {
   width: 90%;
   margin-right: 35%;
-}
-
-.header-img{
-    height: 54px;
-    width: 150px;
-    border-radius: 5px;
 }
 
 #search_field {
@@ -86,7 +91,7 @@ nav {
 }
 
 .card-title a:hover {
-  color: #fa9c23;
+  color: #81fdb5;
   text-decoration: none;
 }
 
@@ -99,7 +104,7 @@ nav {
 }
 
 #view_btn {
-  background-color: #fa9c23;
+  background-color: #81fdb5;
   color: white;
 }
 
@@ -110,7 +115,7 @@ nav {
 
 .ratings {
   font-size: 1.2rem;
-  color: #fdcc0d;
+  color: #a4fdc9;
 }
 
 #no_of_reviews {
@@ -133,7 +138,7 @@ footer {
   display: inline-block;
   position: relative;
   font-family: FontAwesome;
-  color: #fdcc0d;
+  color: #a4fdc9;
 }
 
 .rating-outer::before {
@@ -151,7 +156,7 @@ footer {
 
 .rating-inner::before {
   content: '\f005 \f005 \f005 \f005 \f005';
-  color: #f8ce0b;
+  color:#a4fdc9;
 }
 
 /* Product Details Page */
@@ -168,7 +173,7 @@ footer {
 #cart_btn,
 #review_btn {
   border-radius: 2rem;
-  background-color: #fa9c23;
+  background-color: #81fdb5;
   border: none;
   padding: 0.5rem 2rem;
 }
@@ -213,8 +218,8 @@ footer {
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid #fa9c23;
-  border-color: #fa9c23 transparent;
+  border: 6px solid #81fdb5;
+  border-color: #81fdb5 transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {
@@ -253,15 +258,15 @@ footer {
 
 #checkout_btn,
 .review-btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #81fdb5;
+  border-color: #81fdb5;
   margin-top: 2rem;
   border-radius: 5rem;
 }
 
 #view_order_details {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #81fdb5;
+  border-color: #81fdb5;
 }
 
 #order_summary {
@@ -313,8 +318,8 @@ footer {
 }
 
 .wrapper form .btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #81fdb5;
+  border-color: #81fdb5;
   color: white;
   margin-top: 2.5rem;
 }
@@ -393,7 +398,7 @@ footer {
 }
 
 .active-step {
-  background: #fa9c23;
+  background: #81fdb5;
   color: #fff;
 }
 
@@ -401,7 +406,7 @@ footer {
   float: left;
   width: 0;
   border-top: 20px solid transparent;
-  border-left: 15px solid #fa9c23;
+  border-left: 15px solid #81fdb5;
   border-bottom: 20px solid transparent;
   margin-left: -1px;
 }
@@ -409,9 +414,9 @@ footer {
 .triangle2-active {
   width: 0;
   float: left;
-  border-top: 20px solid #fa9c23;
+  border-top: 20px solid #81fdb5;
   border-left: 15px solid #fff;
-  border-bottom: 20px solid #fa9c23;
+  border-bottom: 20px solid #81fdb5;
   margin-right: -1px;
 }
 
@@ -451,8 +456,8 @@ footer {
 }
 
 #edit_profile {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #81fdb5;
+  border-color: #81fdb5;
 }
 
 /* Confirm Order */
@@ -463,8 +468,8 @@ footer {
 }
 
 .update-btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #81fdb5;
+  border-color: #81fdb5;
   color: white;
 }
 
@@ -474,16 +479,16 @@ footer {
 
 /* Pagination */
 .page-item.active .page-link {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #81fdb5;
+  border-color: #81fdb5;
 }
 
 .page-link {
-  color: #fa9c23;
+  color: #81fdb5;
 }
 
 .page-link:hover {
-  color: #fa9c23;
+  color: #81fdb5;
 }
 
 /* Admin Sidebar */
@@ -609,11 +614,11 @@ ul.CTAs a {
 }
 
 .orange {
-  color: #fa9c23;
+  color: #81fdb5;
 }
 
 .yellow {
-  color: #fdcc0d;
+  color: #a4fdc9;
 }
 
 .review_user {

@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 export default function Product({ product }) {
   return (
@@ -8,7 +8,7 @@ export default function Product({ product }) {
         <img className="card-img-top mx-auto" src={product.image[0].url} />
         <div className="card-body d-flex flex-column">
           <h5 className="card-title">
-            <Link to={`/product/${product._id}`}>{product.name}</Link>
+            <Link to={`/api/product/${product._id}`}>{product.name}</Link>
           </h5>
           <div className="ratings mt-auto">
             <div className="rating-outer">
@@ -21,7 +21,7 @@ export default function Product({ product }) {
           </div>
           <p className="card-text">${product.price}</p>
           <Link
-            to={`/product/${product._id}`}
+            to={`/api/product/${product._id}`}
             id="view_btn"
             className="btn btn-block"
           >
